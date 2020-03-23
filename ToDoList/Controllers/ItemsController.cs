@@ -114,13 +114,13 @@ namespace ToDoList.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost]
-    public ActionResult Complete(int id)
-    {
-      var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
-      
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
+    // [HttpPost]
+    // public ActionResult Complete(int id)
+    // {
+    //   var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
+
+    //   _db.SaveChanges();
+    //   return RedirectToAction("Index");
+    // }
   }
 }

@@ -28,11 +28,11 @@ else
   </ul>
 }
 
-@using (Html.BeginForm("Complete", "Items"))
+@* @using (Html.BeginForm("Complete", "Items"))
 {
   @Html.HiddenFor(model => model.ItemId)
-  <input type="submit" value="Complete">
-}
+  <input type="submit" value="true">
+} *@
 
 <p>@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.ItemId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
