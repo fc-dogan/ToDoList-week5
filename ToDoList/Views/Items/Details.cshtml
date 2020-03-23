@@ -22,10 +22,16 @@ else
     @using (Html.BeginForm("DeleteCategory", "Items"))
     {
       @Html.Hidden("joinId", @join.CategoryItemId)
-      <input type="submit" value="Delete"/>
+      <input type="submit" value="Delete Category"/>
     }
   }
   </ul>
+}
+
+@using (Html.BeginForm("Complete", "Items"))
+{
+  @Html.HiddenFor(model => model.ItemId)
+  <input type="submit" value="Complete">
 }
 
 <p>@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.ItemId })</p>
