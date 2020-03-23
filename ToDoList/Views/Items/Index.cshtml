@@ -15,7 +15,12 @@
 
 @foreach (Item item in Model)
 {
+  @if (item.Completed == true)
+  {
+    <li>@Html.ActionLink($"{item.Description} | Completed", "Details", new { id = item.ItemId })</li>
+  }
   <li>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId })</li>
+  
 }
 
 <p>@Html.ActionLink("Add new item", "Create")</p>
